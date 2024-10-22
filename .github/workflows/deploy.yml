@@ -15,6 +15,9 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Install pnpm
+        run: npm install -g pnpm
+
       - name: Build
         run: pnpm install && npm run build
 
