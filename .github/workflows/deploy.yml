@@ -5,22 +5,19 @@ on:
     branches:
       - master
 
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: checkout
-      uses: actions/checkout@v2
-      persist-credentials: false
+        uses: actions/checkout@v2
+        persist-credentials: false
 
       - name: Build
-      run: pnpm install && npm run build
+        run: pnpm install && npm run build
 
       - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-
-
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
