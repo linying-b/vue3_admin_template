@@ -2,7 +2,7 @@ name:PUSH
 
 on:
   push:
-      branch:
+      branches:
        - master
 
 jobs:
