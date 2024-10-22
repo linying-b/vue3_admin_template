@@ -12,7 +12,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-        persist-credentials: false
+        with:
+          persist-credentials: false
 
       - name: Build
         run: pnpm install && npm run build
