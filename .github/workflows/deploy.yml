@@ -2,8 +2,8 @@ name:PUSH
 
 on:
   push:
-      branches:
-       - master
+    branches:
+      - master
 
 jobs:
   build-and-deploy:
